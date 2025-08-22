@@ -35,9 +35,9 @@ public class RabbitMQService {
 
     public RabbitMQService() {
         this.mapper = new ObjectMapper();
-        this.mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false); // Bilinmeyen JSON alanları için hat verme
+        this.mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false); // Bilinmeyen JSON alanları için hata verme
         this.mapper.configure(DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES, false); // null olanlar var ise hata verme
-        this.mapper.configure(DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT, true); // Boş arraylri null olarak kabul et
+        this.mapper.configure(DeserializationFeature.ACCEPT_EMPTY_ARRAY_AS_NULL_OBJECT, true); // Boş arrayleri null olarak kabul et
         
         this.currentUser = DEFAULT_USERNAME;
         this.currentPassword = DEFAULT_PASSWORD;
